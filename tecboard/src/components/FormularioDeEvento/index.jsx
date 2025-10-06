@@ -9,15 +9,22 @@ export function FormularioDeEvento() {
     <form className="form-evento">
       <TituloFormulario>Preencha para criar um evento:</TituloFormulario>
 
-      <CampoDeFormulario>
-        <Label htmlFor="nome">Qual é o nome do evento?</Label>
-        <CampoDeEntrada
-          type="text"
-          id="nome"
-          placeholder="Summer dev hits"
-          name="nomeEvento"
-        />
-      </CampoDeFormulario>
+      <div className="campos">
+        <CampoDeFormulario>
+          <Label htmlFor="nomeEvento">Qual é o nome do evento?</Label>
+          <CampoDeEntrada
+            type="text"
+            id="nomeEvento"
+            placeholder="Summer dev hits"
+            name="nomeEvento"
+          />
+        </CampoDeFormulario>
+        
+        <CampoDeFormulario>
+          <Label htmlFor="dataEvento">Data do Evento</Label>
+          <CampoDeEntrada type="date" id="dataEvento" name="dataEvento" />
+        </CampoDeFormulario>
+      </div>
     </form>
   );
 }
